@@ -22,9 +22,9 @@ Além das acima, um rol de outras funcionalidades (**bônus**) foram sugeridas. 
 
 ## Plataforma selecionada
 
-Foi preferido pela equipe a linguagem de programação **_Clojure_** dentre a lista sugerida, devido à possibilidade de se transferir experiência em contato anterior com a linguagem **Common Lisp**, da mesma família. A ligação de Clojure com a API Java e sua associação ao JVM também se destacaram
+Foi preferido pela equipe a linguagem de programação **_Clojure_** dentre a lista sugerida, devido à possibilidade de se transferir experiência em contato anterior com a linguagem **Common Lisp**, da mesma família. A ligação de Clojure com a API Java e sua associação ao JVM também se destacaram.
 
-Também foram selecionadas as seguintes ferramentas de dsenvolvimento:
+O sistema operacional selecionado foi a distribuição Linux _openSuse Tumbleweed_. Também foram selecionadas as seguintes ferramentas de dsenvolvimento:
 
 * [_Eclipse_](https://www.eclipse.org) (IDE)
 * [_Leiningen_](https://leinigen.org) (_build automation tool_ mais popular no mundo Clojure) 
@@ -36,7 +36,9 @@ Para facilitar o desenvolvimento deste projeto, recorreu-se a frameworks da comu
 * [_Clojure JDBC_](https://github.com/clojure/java.jdbc): pacote para utilização de camada JDBC de acesso a banco de dados
 * [_SQlite_](https://www.sqlite.org/): banco de dados embutido para utilização em fase de desenvolvimento, no caso deste projeto
 
-Mais detalhes em [**project.clj**](./project.clj)
+Mais detalhes em [**project.clj**](./project.clj).
+
+Os arquivos referentes ao banco de dados e seu arquivo DDL estão em [**resources**](./resources).
 
 ## Execução do app
 
@@ -54,16 +56,32 @@ A porta disponível será **3000** ou incrementos disto
 * _GET /statuses/lookup_ (sem parâmetros)
 * _GET /statuses/show/:id_ (parâmetro id, o id do tweet)
 
-Sugerimos a utilização do utilitário **_curl_** e do usuário:senha _admin:admin_, único disponível atualmente na base de dados
+Sugerimos a utilização do utilitário **_curl_** e do usuário:senha _admin:admin_, único disponível atualmente na base de dados.
+
+Exemplo (autenticação):
+
+* Chamada bem-sucedida:
+	$ curl -u 'admin:admin' -v  http://localhost:3001/
+* Chamada malsucedida:
+	$ curl -u 'foo:bar' -v  http://localhost:3001/
+
+Exemplo (tweets):
+
+* Criar tweet:
+	$ curl -u 'admin:admin' -d 'text="Quarto teste"'  http://localhost:3001/statuses/update
+* Ver tweets do usuário logado:
+	$ curl -u 'admin:admin' -v  http://localhost:3001/statuses/lookup
 
 ## Melhorias futuras
 
+* Documentação completa
 * Concorrência e _multithreading_
 * Banco de dados escalável (possivelmente PostgreSQL)
 * Execução em contêineres (possivelmente em nuvem)
 
 ## Bugs
 
+* Retorno em JSON não funciona
 
 ## Licença
 
