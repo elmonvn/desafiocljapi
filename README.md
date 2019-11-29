@@ -62,20 +62,21 @@ Exemplo (autenticação):
 
 * Chamada bem-sucedida:
 
-	$ curl -u 'admin:admin' -v  http://localhost:3001/
+    $ curl -u 'admin:admin' -v  http://localhost:3001/
+
 * Chamada malsucedida:
 
-	$ curl -u 'foo:bar' -v  http://localhost:3001/
+    $ curl -u 'foo:bar' -v  http://localhost:3001/
 
 Exemplo (tweets):
 
 * Criar tweet:
 
-	$ curl -u 'admin:admin' -d 'text="Quarto teste"'  http://localhost:3001/statuses/update
+    $ curl -u 'admin:admin' -d 'text="Quarto teste"'  http://localhost:3001/statuses/update
 
 * Ver tweets do usuário logado:
 
-	$ curl -u 'admin:admin' -v  http://localhost:3001/statuses/lookup
+    $ curl -u 'admin:admin' -v  http://localhost:3001/statuses/lookup
 
 ## Melhorias futuras
 
