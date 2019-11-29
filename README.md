@@ -54,7 +54,7 @@ A porta disponível será **3000** ou incrementos disto
 * _GET /statuses/lookup_ (sem parâmetros)
 * _GET /statuses/show/:id_ (parâmetro id, o id do tweet)
 
-Sugerimos a utilização do utilitário **_curl_**
+Sugerimos a utilização do utilitário **_curl_** e do usuário:senha _admin:admin_, único disponível atualmente na base de dados
 
 ## Melhorias futuras
 
