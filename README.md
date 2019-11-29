@@ -1,36 +1,70 @@
 # desafiocljapi
 
-FIXME: description
+Projeto para criação de app REST API (clone do Twitter) na plataforma Clojure
 
-## Installation
+## Equipe
 
-Download from http://example.com/FIXME.
+* <a href="mailto:elmon.noronha@gmail.com">Elmon Noronha<a>
 
-## Usage
+## Apresentação da solução
 
-FIXME: explanation
+Conforme solicitado, o desafio deste projeto consistia em desenvolver, a partir de linguagem de programação --- neste caso, Clojure --- uma REST API estilo Twitter que permitisse as seguintes operações:
 
-    $ java -jar desafiocljapi-0.1.0-standalone.jar [args]
+* Criar um novo tweet
+* Listar seus próprios tweets
+* Visualizar seu próprio tweet
 
-## Options
+Além das acima, um rol de outras funcionalidades (**bônus**) foram sugeridas. Neste projeto, as seguintes foram implementadas:
 
-FIXME: listing of options this app accepts.
+* Autenticação (simples, com usuário e senha (aberta) em banco de dados)
+* Curtir (e contar curtidas)
+* Seguir (e contar seguidores e seguindo)
 
-## Examples
+## Plataforma selecionada
 
-...
+Foi preferido pela equipe a linguagem de programação **_Clojure_** dentre a lista sugerida, devido à possibilidade de se transferir experiência em contato anterior com a linguagem **Common Lisp**, da mesma família.
 
-### Bugs
+Também foram selecionadas as seguintes ferramentas de dsenvolvimento:
 
-...
+* [_Eclipse_](https://www.eclipse.org) (IDE)
+* [_Leiningen_](https://leinigen.org) (_build automation tool_ mais popular no mundo Clojure) 
 
-### Any Other Sections
-### That You Think
-### Might be Useful
+Para facilitar o desenvolvimento deste projeto, recorreu-se a frameworks da comunidade Clojure específicos para as funcionalidades a serem implementadas, a saber:
 
-## License
+* [_Ring_](https://github.com/ring-clojure): framework para tratamento de chamadas HTTP de baixo nível e servidor web (Eclipse Jetty)
+* [_Compojure_](https://github.com/weavejester/compojure): ferramenta para manipulação de rotas, trabalhando integrada ao _Ring_
+* [_Clojure JDBC_](https://github.com/clojure/java.jdbc): pacote para utilização de camada JDBC de acesso a banco de dados
+* [_SQlite_](https://www.sqlite.org/): banco de dados embutido para utilização em fase de desenvolvimento, no caso deste projeto
 
-Copyright © 2019 FIXME
+Mais detalhes em [**project.clj**](./project.clj)
+
+## Execução do app
+
+Fazer download de **target/uberjar/desafiocljapi-0.1.0-SNAPSHOT-standalone.jar** e executá-lo como segue abaixo:
+
+    $ java -jar desafiocljapi-0.1.0-SNAPSHOT-standalone.jar
+    
+A porta disponível será **3000** ou incrementos disto
+
+## Exemplo de teste
+
+É possível fazer testes com as seguintes chamadas da API, além da autenticação:
+
+* POST /statuses/update
+* GET /statuses/lookup
+* GET /statuses/show/:id
+
+Sugerimos a utilização do utilitário **_curl_**
+
+## Melhorias futuras
+
+
+## Bugs
+
+
+## Licença
+
+Copyright © 2019 Elmon Noronha
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
