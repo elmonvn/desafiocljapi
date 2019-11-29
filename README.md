@@ -50,9 +50,9 @@ A porta disponível será **3000** ou incrementos disto
 
 É possível fazer testes com as seguintes chamadas da API, além da autenticação:
 
-* POST /statuses/update
-* GET /statuses/lookup
-* GET /statuses/show/:id
+* _POST /statuses/update_ (parâmetro "text")
+* _GET /statuses/lookup_ (sem parâmetros)
+* _GET /statuses/show/:id_ (parâmetro id, o id do tweet)
 
 Sugerimos a utilização do utilitário **_curl_**
 
