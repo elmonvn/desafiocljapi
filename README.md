@@ -22,7 +22,7 @@ Além das acima, um rol de outras funcionalidades (**bônus**) foram sugeridas. 
 
 ## Plataforma selecionada
 
-Foi preferido pela equipe a linguagem de programação **_Clojure_** dentre a lista sugerida, devido à possibilidade de se transferir experiência em contato anterior com a linguagem **Common Lisp**, da mesma família.
+Foi preferido pela equipe a linguagem de programação **_Clojure_** dentre a lista sugerida, devido à possibilidade de se transferir experiência em contato anterior com a linguagem **Common Lisp**, da mesma família. A ligação de Clojure com a API Java e sua associação ao JVM também se destacaram
 
 Também foram selecionadas as seguintes ferramentas de dsenvolvimento:
 
@@ -40,7 +40,7 @@ Mais detalhes em [**project.clj**](./project.clj)
 
 ## Execução do app
 
-Fazer download de **target/uberjar/desafiocljapi-0.1.0-SNAPSHOT-standalone.jar** e executá-lo como segue abaixo:
+Fazer download de [**desafiocljapi-0.1.0-SNAPSHOT-standalone.jar**](target/uberjar/desafiocljapi-0.1.0-SNAPSHOT-standalone.jar) e executá-lo como segue abaixo:
 
     $ java -jar desafiocljapi-0.1.0-SNAPSHOT-standalone.jar
     
@@ -58,6 +58,9 @@ Sugerimos a utilização do utilitário **_curl_** e do usuário:senha _admin:ad
 
 ## Melhorias futuras
 
+* Concorrência e _multithreading_
+* Banco de dados escalável (possivelmente PostgreSQL)
+* Execução em contêineres (possivelmente em nuvem)
 
 ## Bugs
 
